@@ -42,7 +42,7 @@ async function getAllJokes(term) {
 <h2>Search for a Joke</h2>
 <form on:submit|preventDefault={handleSubmit}>
     <label>Search term
-        <input type='text' id='search-term' bind:value={term}/>
+        <input type="text" id="search-term" bind:value={term}/>
     </label>
     <button>Search</button>
 </form>

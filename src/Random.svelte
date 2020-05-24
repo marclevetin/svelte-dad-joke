@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import Joke from "./Joke.svelte";
+
   let joke;
   let isLoading = false;
 
