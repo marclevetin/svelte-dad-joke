@@ -1,6 +1,10 @@
 <script>
 import { onMount } from 'svelte';
 
+// needed to overcome console warning in routing library
+// https://github.com/EmilTholin/svelte-routing/issues/122
+export let location; 
+
 let isLoading = false;
 let allTheJokes = [];
 let term;

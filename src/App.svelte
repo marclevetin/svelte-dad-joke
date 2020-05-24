@@ -20,7 +20,7 @@
         <Link to='search'>Search</Link>
     </nav>
     <section>
-        <Route path='search' component={Search}></Route>
+        <Route path='search' component="{Search}"></Route>
         <Route path='/'><Random /></Route>
     </section>
   </Router>
