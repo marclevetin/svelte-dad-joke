@@ -1,30 +1,30 @@
 <script>
-	export let name;
+  export let url = '';
+  import Search from "./Search.svelte";
+  import Random from "./Random.svelte";
+  import { Router, Link, Route } from "svelte-routing";
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
+
+<main>
+  <header>
+    <h1>Dad Jokes</h1>
+    <p>Now in Svelte.js</p>
+  </header>
+  <Router url="{url}">
+    <nav>
+        <Link to='/'>Random</Link>
+        <Link to='search'>Search</Link>
+    </nav>
+    <section>
+        <Route path='search' component={Search}></Route>
+        <Route path='/'><Random /></Route>
+    </section>
+  </Router>
+  <footer>
+    <p>This is the footer</p>
+  </footer>
+</main>
